@@ -93,6 +93,6 @@ ssize_t第一个s是signed，即ssize_t是typedef声明的signed int类型
 ### 1.2.4 读取文件中的数据
 ```c
 #include <unistd.h>
-ssize_t read(int fd)
+ssize_t read(int fd, void * buf, size_t nbytes);
 ```
 成功返回接收的字节数（但遇到文件结尾则返回0），失败返回-1
